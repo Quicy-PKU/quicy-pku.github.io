@@ -1,3 +1,41 @@
+@font-face {
+    font-family: digit;
+    src: url("digital-7_mono.ttf") format("truetype");
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #ffe;
+    overflow: auto;
+}
+
+canvas {
+    position: absolute;
+    z-index: -1;
+}
+
+a:link {
+    text-decoration: none;
+    color: black;
+}
+a:visited {
+    text-decoration: none;
+    color: black;
+}
+a:hover {
+    text-decoration: none;
+    color: black;
+}
+a:active {
+    text-decoration: none;
+    color: black;
+}
+
+
+
+
+
 .VivaTimeline dl {
     position: relative;
     top: 0;
