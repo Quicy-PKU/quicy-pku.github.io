@@ -314,13 +314,14 @@
     var ctx = canvas.getContext("2d");
     var ww, wh;
     function onResize() {
-      ww = canvas.width = window.innerWidth;
-      wh = canvas.height = window.innerHeight;
+      ww = canvas.width = window.outerWidth;
+      // wh = canvas.height = window.outerHeight;
+      wh = canvas.height = document.documentElement.scrollHeight;
     }
     ctx.strokeStyle = "red";
     ctx.shadowBlur = 25;
     ctx.shadowColor = "hsla(0, 100%, 60%,0.5)";
-    var precision = 100;
+    var precision = 150;
     var hearts = [];
     var mouseMoved = false;
     function onMove(e) {
@@ -394,6 +395,8 @@
     window.addEventListener("touchmove", onMove);
     window.addEventListener("resize", onResize);
     requestAnimationFrame(render);
+    var interval = setInterval(onResize, 1000);
+    setTimeout("window.clearInterval(interval)", 10000);
   </script>
 </body>
 </html>
